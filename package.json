@@ -1,0 +1,49 @@
+{
+  "name": "claude-profile-selector",
+  "displayName": "Claude Code Model Selector (OmniRoute)",
+  "description": "Switch Claude Code models live from OmniRoute via the VS Code status bar",
+  "version": "4.0.0",
+  "publisher": "ramPyare",
+  "icon": "icon.png",
+  "license": "MIT",
+  "keywords": ["claude", "claude code", "omniroute", "ai", "model selector", "anthropic"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ramPyare/claude-profile-selector"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": ["AI", "Other"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "claudeProfileSelector.selectProfile",
+        "title": "Claude: Select Model (OmniRoute)",
+        "icon": "$(settings-gear)"
+      },
+      {
+        "command": "claudeProfileSelector.refreshModels",
+        "title": "Claude: Refresh Model List",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "claudeProfileSelector.showCurrentProfile",
+        "title": "Claude: Show Current Model"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        { "command": "claudeProfileSelector.selectProfile" },
+        { "command": "claudeProfileSelector.refreshModels" },
+        { "command": "claudeProfileSelector.showCurrentProfile" }
+      ]
+    }
+  },
+  "scripts": {
+    "install-ext": "node install.js"
+  },
+  "devDependencies": {}
+}

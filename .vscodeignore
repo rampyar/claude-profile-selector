@@ -1,0 +1,7 @@
+﻿# Exclude files not needed in the published extension
+icon.jpg
+install.js
+*.vsix
+workspace.code-workspace
+.vscode/**
+node_modules/**
